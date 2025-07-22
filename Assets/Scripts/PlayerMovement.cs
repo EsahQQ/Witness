@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,9 +9,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int currentLine = 1;
     private int _moveDirection;
     private Vector3 _targetPosition;
+    private bool _canMove = true;
+
+    private void Start()
+    {
+        PlayerController.Instance.OnPlayerDeath += OnPlayerDeath;
+    }
 
     private void Update()
     {
+        if (!_canMove) return;
         if (_moveDirection == 0)
         {
             if (Input.GetKeyDown(KeyCode.W))
@@ -29,7 +37,17 @@ public class PlayerMovement : MonoBehaviour
             UpdateMovement();
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        PlayerController.Instance.OnPlayerDeath -= OnPlayerDeath;
+    }
+
+    private void OnPlayerDeath(object sender, EventArgs e)
+    {
+        _canMove = false;
+    }
+
     private void StartMovement(int direction)
     {
         _moveDirection = direction;
