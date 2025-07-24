@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 019ba87d5cf7b4fb8a8a9aa37ad391bf
+guid: 7aa5b4ddd4c8a484da725e8633495cef
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -7,7 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -51,7 +51,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 1
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -91,5 +91,5 @@ AssetOrigin:
   productId: 141036
   packageName: Asphalt materials
   packageVersion: 1.0
-  assetPath: Assets/Textures/Asphalt_texture10/NormalMap-10.png
+  assetPath: Assets/Asphalt_materials/Textures/Asphalt_texture8/Asphalt_texture_8.png
   uploadId: 297345

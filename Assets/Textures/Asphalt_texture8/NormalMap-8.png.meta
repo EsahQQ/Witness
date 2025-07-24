@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 019ba87d5cf7b4fb8a8a9aa37ad391bf
+guid: c68442966c0ad4a9bbcbdda6bdbb2003
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -91,5 +91,5 @@ AssetOrigin:
   productId: 141036
   packageName: Asphalt materials
   packageVersion: 1.0
-  assetPath: Assets/Textures/Asphalt_texture10/NormalMap-10.png
+  assetPath: Assets/Asphalt_materials/Textures/Asphalt_texture8/NormalMap-8.png
   uploadId: 297345
