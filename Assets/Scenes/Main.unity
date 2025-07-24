@@ -997,6 +997,8 @@ GameObject:
   - component: {fileID: 336575348}
   - component: {fileID: 337574324}
   - component: {fileID: 339502965}
+  - component: {fileID: 339502966}
+  - component: {fileID: 339502967}
   m_Layer: 0
   m_Name: Building_Drug Store
   m_TagString: OpenBuilding
@@ -1025,6 +1027,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.86802, y: 6.4990034, z: 9.727134}
   m_Center: {x: 0.32459322, y: 3.2494764, z: -0.06046884}
+--- !u!114 &339502966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339502964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &339502967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339502964}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.21879, y: 3.1985676, z: 2.6081076}
+  m_Center: {x: -0.000026359166, y: 1.59926, z: 5.558354}
 --- !u!95 &342520895
 Animator:
   serializedVersion: 7
@@ -5414,8 +5449,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.327434, y: 10.411013, z: 6.3894544}
-  m_Center: {x: 0.96220636, y: 5.2054796, z: -0.22512017}
+  m_Size: {x: 9.327434, y: 10.411013, z: 6.656612}
+  m_Center: {x: 0.9622063, y: 5.2054796, z: -0.09154125}
 --- !u!1 &1797752578
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,8 +6220,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12.039236, y: 8.357073, z: 20.379059}
-  m_Center: {x: 0.50255805, y: 4.1785145, z: -3.6653364}
+  m_Size: {x: 12.039236, y: 8.357073, z: 20.675426}
+  m_Center: {x: 0.5025581, y: 4.1785145, z: -3.8135173}
 --- !u!95 &2067120767
 Animator:
   serializedVersion: 7
@@ -7171,6 +7206,7 @@ GameObject:
   - component: {fileID: 3256941780156922052}
   - component: {fileID: 120212580}
   - component: {fileID: 8022899412782965067}
+  - component: {fileID: 8022899412782965068}
   m_Layer: 0
   m_Name: CollegeStudent
   m_TagString: Untagged
@@ -8630,6 +8666,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletal: {fileID: 1280057925289320902}
+--- !u!114 &8022899412782965068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053518115015744805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a753a23852b394190d8a7ff1e22fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8161198366264117488
 GameObject:
   m_ObjectHideFlags: 0
