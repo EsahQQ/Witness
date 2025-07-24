@@ -997,8 +997,8 @@ GameObject:
   - component: {fileID: 336575348}
   - component: {fileID: 337574324}
   - component: {fileID: 339502965}
-  - component: {fileID: 339502966}
   - component: {fileID: 339502967}
+  - component: {fileID: 339502968}
   m_Layer: 0
   m_Name: Building_Drug Store
   m_TagString: OpenBuilding
@@ -1027,18 +1027,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.86802, y: 6.4990034, z: 9.727134}
   m_Center: {x: 0.32459322, y: 3.2494764, z: -0.06046884}
---- !u!114 &339502966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339502964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &339502967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1058,8 +1046,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.21879, y: 3.1985676, z: 2.6081076}
-  m_Center: {x: -0.000026359166, y: 1.59926, z: 5.558354}
+  m_Size: {x: 5.1420956, y: 2.9132166, z: 2.6081076}
+  m_Center: {x: -0.027224557, y: 1.4565845, z: 5.558354}
+--- !u!114 &339502968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339502964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 2030692821}
+  nextTargetName: Books Shop
 --- !u!95 &342520895
 Animator:
   serializedVersion: 7
@@ -2457,10 +2459,12 @@ GameObject:
   - component: {fileID: 856201147}
   - component: {fileID: 859625371}
   - component: {fileID: 858625371}
+  - component: {fileID: 859625374}
   - component: {fileID: 859625372}
+  - component: {fileID: 859625373}
   m_Layer: 0
   m_Name: Building_Auto Service
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2533,12 +2537,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.098682, y: 2.950183, z: 3.1011865}
+  m_Center: {x: -6.2939954, y: 1.4755731, z: 5.4029465}
+--- !u!114 &859625373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856624027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 2023321285}
+  nextTargetName: Gift Shop
+--- !u!65 &859625374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856624027}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 23.826061, y: 6.9995446, z: 8.263671}
-  m_Center: {x: -2.3918967, y: 3.500254, z: 0.049092762}
+  m_Size: {x: 18.271515, y: 6.9995446, z: 8.263671}
+  m_Center: {x: -0.22109133, y: 3.5002534, z: 0.04909266}
 --- !u!1 &871195608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,9 +3187,11 @@ GameObject:
   - component: {fileID: 1023480278}
   - component: {fileID: 1024480022}
   - component: {fileID: 1026904567}
+  - component: {fileID: 1026904568}
+  - component: {fileID: 1026904569}
   m_Layer: 0
   m_Name: Building_Fruits  Shop
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3189,8 +3230,43 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12.126189, y: 11.605602, z: 12.155826}
-  m_Center: {x: 0.13455871, y: 5.802828, z: 0.0893295}
+  m_Size: {x: 11.706669, y: 11.605604, z: 11.875139}
+  m_Center: {x: -0.07520198, y: 5.802828, z: -0.051013824}
+--- !u!114 &1026904568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026739670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 1583339288}
+  nextTargetName: Coffe Shop
+--- !u!65 &1026904569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026739670}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.457576, y: 3.2931423, z: 5.2762547}
+  m_Center: {x: 4.1285057, y: 1.6465998, z: 4.2354903}
 --- !u!1 &1027732511
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,10 +4311,12 @@ GameObject:
   - component: {fileID: 1375134230}
   - component: {fileID: 1371710006}
   - component: {fileID: 1372840182}
+  - component: {fileID: 1375134233}
   - component: {fileID: 1375134231}
+  - component: {fileID: 1375134232}
   m_Layer: 0
   m_Name: Building_Super Market
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4273,12 +4351,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.278701, y: 2.242543, z: 2.7126844}
+  m_Center: {x: -0.08727534, y: 1.1207708, z: 6.7934313}
+--- !u!114 &1375134232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374780982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 1026739670}
+  nextTargetName: Fruits Shop
+--- !u!65 &1375134233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374780982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 23.99978, y: 7.5784726, z: 11.629631}
-  m_Center: {x: -0.5968929, y: 3.7887337, z: 0.014708498}
+  m_Size: {x: 23.752514, y: 7.5784726, z: 11.920726}
+  m_Center: {x: -0.47325858, y: 3.7887337, z: 0.16025622}
 --- !u!1 &1440456595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,10 +4795,12 @@ GameObject:
   - component: {fileID: 1582844728}
   - component: {fileID: 1584139032}
   - component: {fileID: 1585269208}
+  - component: {fileID: 1585269211}
   - component: {fileID: 1585269209}
+  - component: {fileID: 1585269210}
   m_Layer: 0
   m_Name: Building_Coffee Shop
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4758,12 +4873,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.771, y: 2.908073, z: 3.7147822}
+  m_Center: {x: 0.25077185, y: 1.4532068, z: 6.484084}
+--- !u!114 &1585269210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583339288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 856624027}
+  nextTargetName: Autoservice
+--- !u!65 &1585269211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583339288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 19.767159, y: 7.0017285, z: 12.046553}
-  m_Center: {x: -0.13139544, y: 3.5000346, z: -0.049612552}
+  m_Size: {x: 19.375301, y: 7.0017276, z: 12.45781}
+  m_Center: {x: -0.3273221, y: 3.5000346, z: 0.15601662}
 --- !u!95 &1712081958
 Animator:
   serializedVersion: 7
@@ -5451,127 +5601,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.327434, y: 10.411013, z: 6.656612}
   m_Center: {x: 0.9622063, y: 5.2054796, z: -0.09154125}
---- !u!1 &1797752578
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1797752581}
-  - component: {fileID: 1797752580}
-  - component: {fileID: 1797752579}
-  m_Layer: 0
-  m_Name: OpenBuildingLight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1797752579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797752578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
---- !u!108 &1797752580
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797752578}
-  m_Enabled: 1
-  serializedVersion: 11
-  m_Type: 2
-  m_Color: {r: 0.6556604, g: 0.9330169, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
---- !u!4 &1797752581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797752578}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.43, y: 0.693, z: 1.85}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1884978470
 Transform:
   m_ObjectHideFlags: 0
@@ -5802,9 +5831,11 @@ GameObject:
   - component: {fileID: 2024452805}
   - component: {fileID: 2025582597}
   - component: {fileID: 2025582598}
+  - component: {fileID: 2025582599}
+  - component: {fileID: 2025582600}
   m_Layer: 0
   m_Name: Building_Gift Shop (1)
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5898,6 +5929,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.320777, y: 6.4990034, z: 9.432991}
   m_Center: {x: 0.5509791, y: 3.2495003, z: -0.2075325}
+--- !u!114 &2025582599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023321285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 0}
+  nextTargetName: 
+--- !u!65 &2025582600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023321285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.771879, y: 1.9996225, z: 3.0634723}
+  m_Center: {x: -0.02494314, y: 0.99980885, z: 5.366219}
 --- !u!1 &2030692821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,10 +5975,12 @@ GameObject:
   - component: {fileID: 2030692822}
   - component: {fileID: 2030692824}
   - component: {fileID: 2030692823}
+  - component: {fileID: 2030692827}
   - component: {fileID: 2030692825}
+  - component: {fileID: 2030692826}
   m_Layer: 0
   m_Name: Building_Books Shop (1)
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6000,12 +6068,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.9191055, y: 2.932166, z: 4.516073}
+  m_Center: {x: 4.7443233, y: 1.466126, z: 4.950772}
+--- !u!114 &2030692826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030692821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 2035522260}
+  nextTargetName: Shoes Shop
+--- !u!65 &2030692827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030692821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12.273896, y: 8.357073, z: 12.035604}
-  m_Center: {x: 0.38523313, y: 4.1785808, z: 0.50645727}
+  m_Size: {x: 11.481169, y: 8.357073, z: 11.299508}
+  m_Center: {x: 0.22352876, y: 4.1785808, z: 0.13840921}
 --- !u!1 &2031116126
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,9 +6229,11 @@ GameObject:
   - component: {fileID: 2036352724}
   - component: {fileID: 2037449748}
   - component: {fileID: 2037449749}
+  - component: {fileID: 2037449750}
+  - component: {fileID: 2037449751}
   m_Layer: 0
   m_Name: Building_Shoes Shop
-  m_TagString: Untagged
+  m_TagString: ClosedBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6220,8 +6325,43 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 12.039236, y: 8.357073, z: 20.675426}
-  m_Center: {x: 0.5025581, y: 4.1785145, z: -3.8135173}
+  m_Size: {x: 11.434538, y: 8.357073, z: 20.024197}
+  m_Center: {x: 0.20020883, y: 4.1785145, z: -4.1391306}
+--- !u!114 &2037449750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035522260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44acec74d6a0264ba26603120f80e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTarget: {fileID: 1374780982}
+  nextTargetName: Supermarket
+--- !u!65 &2037449751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035522260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.8712254, y: 2.9803946, z: 5.4007506}
+  m_Center: {x: 4.686191, y: 1.4901758, z: 4.572578}
 --- !u!95 &2067120767
 Animator:
   serializedVersion: 7
@@ -8824,4 +8964,3 @@ SceneRoots:
   - {fileID: 871195612}
   - {fileID: 2053518115015744804}
   - {fileID: 1440456596}
-  - {fileID: 1797752581}

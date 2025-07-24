@@ -18,9 +18,6 @@ namespace SecondMinigame
         {
             if (!other.CompareTag("OpenBuilding")) return;
             _currentInteractable = other.GetComponent<IInteractable>();
-            other.tag = "ClosedBuilding";
-            var otherLight =  other.GetComponent<Light>();
-            otherLight.enabled = false;
         }
 
         private void OnTriggerExit(Collider other)
