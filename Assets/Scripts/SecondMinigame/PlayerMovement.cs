@@ -13,6 +13,7 @@ namespace SecondMinigame
         private Vector3 _currentInputVector;
         private readonly float _minMoveSpeed = 0.1f;
         private float _lastVectorX;
+        private bool _canMove = true;
 
         public event EventHandler OnPlayerTurn;
         public bool IsRunning { get; private set; }
@@ -26,8 +27,15 @@ namespace SecondMinigame
             _playerInputActions.Enable();
         }
 
+        private void Start()
+        {
+            PlayerController.Instance.OnPlayerHide += OnPlayerHide;
+        }
+
         private void Update()
         {
+            if (!_canMove) return;
+            
             _currentInputVector = GetMovementVector();
             _currentInputVector = _currentInputVector.normalized;
             if (_currentInputVector.x != 0 && !Mathf.Approximately(Mathf.Sign(_currentInputVector.x), Mathf.Sign(_lastVectorX)))
@@ -43,8 +51,14 @@ namespace SecondMinigame
 
         private void FixedUpdate()
         {
+            if (!_canMove) return; 
             _rigidbody.MovePosition(_rigidbody.position + _currentInputVector * (Time.fixedDeltaTime * moveSpeed));
-            
+        }
+        
+        private void OnPlayerHide(object sender, EventArgs e)
+        {
+            _canMove = !_canMove;
+            IsRunning = !IsRunning;
         }
 
         private Vector3 GetMovementVector()

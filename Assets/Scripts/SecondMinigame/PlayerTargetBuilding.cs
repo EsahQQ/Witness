@@ -7,19 +7,20 @@ namespace SecondMinigame
     {
         [SerializeField] private GameObject nextTarget;
         [SerializeField] private string nextTargetName;
+        
         public void Interact()
         {
             if (!nextTarget)
             {
                 Debug.Log("Win!");
-                tag = "ClosedBuilding";
+                //MiniGame end
             }
             else
             {
-                
                 nextTarget.tag = "OpenBuilding";
                 Debug.Log("Next target is " + nextTargetName + "!");
             }
+            tag = "ClosedBuilding";
         }
     }
 }

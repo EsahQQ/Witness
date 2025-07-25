@@ -6,18 +6,33 @@ namespace SecondMinigame
 {
     public class PlayerController : MonoBehaviour
     {
-        private IInteractable _currentInteractable;
+        private GameObject _currentInteractable;
+
+        public static PlayerController Instance { get; private set; }
+        public event EventHandler OnPlayerHide;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E) && _currentInteractable != null)
-                _currentInteractable.Interact();
+            if (!_currentInteractable) return;
+            if (Input.GetKeyDown(KeyCode.E) && _currentInteractable.CompareTag("OpenBuilding"))
+            {
+                _currentInteractable.GetComponent<IInteractable>().Interact();
+            }
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("PlayerHideInvoke");
+                OnPlayerHide?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag("OpenBuilding")) return;
-            _currentInteractable = other.GetComponent<IInteractable>();
+            _currentInteractable = other.gameObject;
         }
 
         private void OnTriggerExit(Collider other)

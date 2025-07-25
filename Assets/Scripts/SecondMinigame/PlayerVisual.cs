@@ -9,6 +9,7 @@ namespace SecondMinigame
         [SerializeField] private GameObject skeletal;
         private static readonly int Running = Animator.StringToHash("Running");
         private Animator _animator;
+        private bool _skeletalActive = true;
 
         private void Awake()
         {
@@ -18,16 +19,30 @@ namespace SecondMinigame
         private void Start()
         {
             PlayerMovement.Instance.OnPlayerTurn += OnPlayerTurn;
+            PlayerController.Instance.OnPlayerHide += OnPlayerHide;
         }
 
         private void Update()
         {
             _animator.SetBool(Running, PlayerMovement.Instance.IsRunning);
         }
-        
+
+        private void OnDestroy()
+        {
+            PlayerMovement.Instance.OnPlayerTurn -= OnPlayerTurn;
+            PlayerController.Instance.OnPlayerHide -= OnPlayerHide;
+        }
+
         private void OnPlayerTurn(object sender, EventArgs e)
         {
             skeletal.transform.Rotate(0f, 180f, 0f);
+        }
+        
+        private void OnPlayerHide(object sender, EventArgs e)
+        {
+            _skeletalActive = !_skeletalActive;
+            skeletal.SetActive(_skeletalActive);
+            Debug.Log("Player is hidden");
         }
     }
 }
