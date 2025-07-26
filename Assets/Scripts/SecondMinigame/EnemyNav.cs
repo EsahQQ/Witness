@@ -56,7 +56,12 @@ namespace SecondMinigame
             }
             
         }
-        
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("GameOver");
+        }
+
         private void CheckCurrentState()
         {
             if (Vector3.Distance(transform.position, _player.transform.position) < chasingDistance  && !_player.IsPlayerHide)

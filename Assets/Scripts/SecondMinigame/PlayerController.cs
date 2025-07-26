@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace SecondMinigame
 {
+    [RequireComponent(typeof(BoxCollider))]
     public class PlayerController : MonoBehaviour
     {
         private GameObject _currentInteractable;
+        private BoxCollider _collider;
 
         public static PlayerController Instance { get; private set; }
         public event EventHandler OnPlayerHide;
@@ -16,6 +18,7 @@ namespace SecondMinigame
         private void Awake()
         {
             Instance = this;
+            _collider = GetComponent<BoxCollider>();
         }
 
         private void Update()
@@ -27,8 +30,8 @@ namespace SecondMinigame
             }
             else if (Input.GetKeyDown(KeyCode.F))
             {
-                Debug.Log("PlayerHideInvoke");
                 IsPlayerHide = !IsPlayerHide;
+                _collider.enabled = !_collider.enabled;
                 OnPlayerHide?.Invoke(this, EventArgs.Empty);
             }
         }
