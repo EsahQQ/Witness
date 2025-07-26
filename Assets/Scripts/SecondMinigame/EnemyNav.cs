@@ -17,16 +17,22 @@ namespace SecondMinigame
         private PlayerController _player;
         private float _elapsedTime;
         private State _currentState;
+        private bool _isTurnedRight = true;
+        private bool _isIdle;
+        public event EventHandler<State> OnStateSwitch;
+        public event EventHandler OnEnemyTurn;
 
-        private enum State
+        public enum State
         {
             Roaming,
-            Chasing
+            Chasing,
+            Idle
         }
         
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
+            _agent.updateRotation = false;
         }
 
         private void Start()
@@ -48,14 +54,24 @@ namespace SecondMinigame
                     Chasing();
                     break;
             }
+            
         }
         
         private void CheckCurrentState()
         {
-            if (Vector3.Distance(transform.position, _player.transform.position) < chasingDistance)
-                _currentState = State.Chasing;
-            else
+            if (Vector3.Distance(transform.position, _player.transform.position) < chasingDistance  && !_player.IsPlayerHide)
+            {
+                if (_currentState != State.Chasing)
+                {
+                    _currentState = State.Chasing;
+                    OnStateSwitch?.Invoke(this, _currentState);
+                }
+            }
+            else if (_currentState != State.Roaming)
+            {
                 _currentState = State.Roaming;
+                OnStateSwitch?.Invoke(this, _currentState);
+            }
         }
 
         private void Roaming()
@@ -64,6 +80,23 @@ namespace SecondMinigame
             {
                 SetDestination();
                 _elapsedTime = 0;
+            }
+            //Debug.Log(_agent.remainingDistance);
+            if (_agent.remainingDistance < 1 && _agent.remainingDistance != 0)
+            {
+                if (!_isIdle)
+                {
+                    _isIdle = true;
+                    OnStateSwitch?.Invoke(this, State.Idle);
+                }
+            }
+            else
+            {
+                if (_isIdle  && _agent.remainingDistance != 0)
+                {
+                    _isIdle = false;
+                    OnStateSwitch?.Invoke(this, State.Idle);
+                }
             }
 
             _elapsedTime += Time.deltaTime;
@@ -82,6 +115,9 @@ namespace SecondMinigame
                 _agent.CalculatePath(navHit.position, path);
                 if (path.status != NavMeshPathStatus.PathComplete) continue;
                 _agent.SetDestination(navHit.position);
+                
+                CheckEnemyTurn(navHit.position.x);
+                    
                 return;
             }
         }
@@ -89,6 +125,16 @@ namespace SecondMinigame
         private void Chasing()
         {
             _agent.destination = _player.transform.position;
+            CheckEnemyTurn(_player.transform.position.x);
+        }
+
+        private void CheckEnemyTurn(float xPosition)
+        {
+            if ((xPosition < transform.position.x && _isTurnedRight) || (xPosition > transform.position.x && !_isTurnedRight))
+            {
+                OnEnemyTurn?.Invoke(this, EventArgs.Empty);
+                _isTurnedRight =  !_isTurnedRight;
+            }
         }
     }
 }

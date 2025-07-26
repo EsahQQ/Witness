@@ -11,6 +11,8 @@ namespace SecondMinigame
         public static PlayerController Instance { get; private set; }
         public event EventHandler OnPlayerHide;
 
+        public bool IsPlayerHide;
+
         private void Awake()
         {
             Instance = this;
@@ -26,6 +28,7 @@ namespace SecondMinigame
             else if (Input.GetKeyDown(KeyCode.F))
             {
                 Debug.Log("PlayerHideInvoke");
+                IsPlayerHide = !IsPlayerHide;
                 OnPlayerHide?.Invoke(this, EventArgs.Empty);
             }
         }
