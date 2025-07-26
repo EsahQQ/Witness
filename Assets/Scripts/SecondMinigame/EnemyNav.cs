@@ -1,6 +1,8 @@
+using System;
 using Unity.Mathematics.Geometry;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace SecondMinigame
 {
@@ -10,14 +12,53 @@ namespace SecondMinigame
         [SerializeField] private float checkTimer = 5f;
         [SerializeField] private float minMoveDistance = 10f;
         [SerializeField] private float maxMoveDistance = 20f;
+        [SerializeField] private float chasingDistance = 5f;
         private NavMeshAgent _agent;
+        private PlayerController _player;
         private float _elapsedTime;
+        private State _currentState;
+
+        private enum State
+        {
+            Roaming,
+            Chasing
+        }
+        
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
         }
 
+        private void Start()
+        {
+            _elapsedTime = checkTimer;
+            _player = PlayerController.Instance;
+        }
+
         private void Update()
+        {
+            CheckCurrentState();
+            
+            switch (_currentState)
+            {
+                case State.Roaming:
+                    Roaming();
+                    break;
+                case State.Chasing:
+                    Chasing();
+                    break;
+            }
+        }
+        
+        private void CheckCurrentState()
+        {
+            if (Vector3.Distance(transform.position, _player.transform.position) < chasingDistance)
+                _currentState = State.Chasing;
+            else
+                _currentState = State.Roaming;
+        }
+
+        private void Roaming()
         {
             if (_elapsedTime >= checkTimer)
             {
@@ -27,29 +68,27 @@ namespace SecondMinigame
 
             _elapsedTime += Time.deltaTime;
         }
-
+        
         private void SetDestination()
         {
             for (int i = 0; i < 100; i++)
             {
-                Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * Random.Range(minMoveDistance, maxMoveDistance);
+                var distance = Random.Range(minMoveDistance, maxMoveDistance);
+                Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * distance;
                 randomDir += transform.position;
 
-                if (NavMesh.SamplePosition(randomDir, out NavMeshHit navHit, 5, NavMesh.AllAreas))
-                {
-                    NavMeshPath path = new NavMeshPath();
-                    _agent.CalculatePath(navHit.position, path);
-                    if (path.status == NavMeshPathStatus.PathComplete)
-                    {
-                        _agent.SetDestination(navHit.position);
-                        return;
-                    }
-                        
-                }
+                if (!NavMesh.SamplePosition(randomDir, out NavMeshHit navHit, 5, NavMesh.AllAreas)) continue;
+                NavMeshPath path = new NavMeshPath();
+                _agent.CalculatePath(navHit.position, path);
+                if (path.status != NavMeshPathStatus.PathComplete) continue;
+                _agent.SetDestination(navHit.position);
+                return;
             }
-            
-            
-            
+        }
+
+        private void Chasing()
+        {
+            _agent.destination = _player.transform.position;
         }
     }
 }

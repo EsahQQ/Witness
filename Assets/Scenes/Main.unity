@@ -6207,7 +6207,7 @@ Transform:
   m_GameObject: {fileID: 1994588527}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.00832, y: 0.75, z: -22.7}
+  m_LocalPosition: {x: 17.04, y: 0.75, z: -9.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6226,8 +6226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkTimer: 10
-  minMoveDistance: 10
-  maxMoveDistance: 20
+  minMoveDistance: 15
+  maxMoveDistance: 25
+  chasingDistance: 5
 --- !u!1 &2023321285
 GameObject:
   m_ObjectHideFlags: 0
