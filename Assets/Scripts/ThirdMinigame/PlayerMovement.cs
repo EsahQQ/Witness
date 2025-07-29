@@ -7,11 +7,9 @@ namespace ThirdMinigame
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [Tooltip("Размер одной клетки в юнитах Unity")]
         [SerializeField] private float tileSize = 1f;
-
-        [Tooltip("Время, за которое персонаж перемещается на одну клетку (в секундах)")]
         [SerializeField] private float moveDuration = 0.2f;
+        [SerializeField] private LayerMask groundLayer;
         
         private SceneThreeInput _playerInputActions;
         private bool _isMoving = false;
@@ -53,10 +51,17 @@ namespace ThirdMinigame
             
             if (moveDirection != Vector3.zero)
             {
+                if (!CanMove(moveDirection)) return;
                 StartCoroutine(MoveToTile(moveDirection));
             }
         }
-        
+
+        private bool CanMove(Vector3 direction)
+        {
+            Vector3 targetPosition = transform.position + direction * tileSize;
+            return Physics.Raycast(targetPosition, Vector3.down, 1f, groundLayer);
+        }
+                
         private IEnumerator MoveToTile(Vector3 direction)
         {
             _isMoving = true;
