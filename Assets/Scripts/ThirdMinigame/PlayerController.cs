@@ -25,7 +25,6 @@ namespace ThirdMinigame
             
             if (other.gameObject.CompareTag("Exit"))
             {
-                Debug.Log("Win");
                 GameManager.Instance.CompleteLevel();
             }
         }
