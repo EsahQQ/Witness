@@ -22,10 +22,12 @@ namespace ThirdMinigame
                 }
                 _currentTile = other.gameObject;
             }
-            /*if (other.gameObject.CompareTag("Exit"))
+            
+            if (other.gameObject.CompareTag("Exit"))
             {
-                
-            }*/
+                Debug.Log("Win");
+                GameManager.Instance.MoveToNextLevel();
+            }
         }
     }
 }
