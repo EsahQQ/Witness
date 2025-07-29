@@ -13,6 +13,7 @@ namespace ThirdMinigame
         
         private SceneThreeInput _playerInputActions;
         private bool _isMoving = false;
+        public bool CanMove { get; set; } = true;
 
         private void Awake()
         {
@@ -32,7 +33,7 @@ namespace ThirdMinigame
 
         private void PlayerMove(InputAction.CallbackContext obj)
         {
-            if (_isMoving)
+            if (!CanMove || _isMoving)
             {
                 return;
             }
@@ -51,12 +52,12 @@ namespace ThirdMinigame
             
             if (moveDirection != Vector3.zero)
             {
-                if (!CanMove(moveDirection)) return;
+                if (!CanMoveToTile(moveDirection)) return;
                 StartCoroutine(MoveToTile(moveDirection));
             }
         }
 
-        private bool CanMove(Vector3 direction)
+        private bool CanMoveToTile(Vector3 direction)
         {
             Vector3 targetPosition = transform.position + direction * tileSize;
             return Physics.Raycast(targetPosition, Vector3.down, 1f, groundLayer);
