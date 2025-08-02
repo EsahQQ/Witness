@@ -6,11 +6,14 @@ namespace ThirdMinigame
     public class PlayerController : MonoBehaviour
     {
         private GameObject _currentTile;
+
+        private int _coinsCollected;
         
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Coin"))
             {
+                _coinsCollected++;
                 Destroy(other.gameObject);
             }
 
@@ -25,7 +28,8 @@ namespace ThirdMinigame
             
             if (other.gameObject.CompareTag("Exit"))
             {
-                GameManager.Instance.CompleteLevel();
+                GameManager.Instance.CompleteLevel(_coinsCollected);
+                _coinsCollected = 0;
             }
         }
     }

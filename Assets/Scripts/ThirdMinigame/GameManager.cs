@@ -9,10 +9,12 @@ namespace ThirdMinigame
         [SerializeField] private GameObject player;
         [SerializeField] private GameObject playerCamera;
         [SerializeField] private float fadeDuration = 0.5f;
+        [SerializeField] private int coinsOnLevel = 24;
         
         private Vector3 _playerStartPosition;   
         private PlayerMovement _playerMovement;
         private Camera _cameraComponent;
+        private int _levelsCompleted;
         
         public static GameManager Instance { get; private set; }
 
@@ -28,9 +30,17 @@ namespace ThirdMinigame
             _playerStartPosition = player.transform.position;
         }
 
-        public void CompleteLevel()
+        public void CompleteLevel(int coinsCollected)
         {
-            StartCoroutine(TransitionToNextLevel());
+            if (coinsCollected == coinsOnLevel)
+            {
+                StartCoroutine(TransitionToNextLevel());
+                _levelsCompleted++;
+            }
+            else
+            {
+                Debug.Log($"Not enough coins ({coinsCollected}, {coinsOnLevel})");
+            }
         }
         
         private IEnumerator TransitionToNextLevel()
