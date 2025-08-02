@@ -34,8 +34,16 @@ namespace ThirdMinigame
         {
             if (coinsCollected == coinsOnLevel)
             {
-                StartCoroutine(TransitionToNextLevel());
                 _levelsCompleted++;
+                if (_levelsCompleted == 5)
+                {
+                    Debug.Log("Game Win");
+                }
+                else
+                {
+                    StartCoroutine(TransitionToNextLevel());
+                    coinsOnLevel--;
+                }
             }
             else
             {
