@@ -16,7 +16,8 @@ namespace ThirdMinigame
         public bool CanMove { get; set; } = true;
         
         public event EventHandler<Vector3> OnPlayerMove;
-
+        public event EventHandler OnPlayerStop;
+        
         private void Awake()
         {
             _playerInputActions = new SceneThreeInput();
@@ -81,6 +82,7 @@ namespace ThirdMinigame
 
             transform.position = endPosition;
             _isMoving = false;
+            OnPlayerStop?.Invoke(this, EventArgs.Empty);
         }
     }
 }

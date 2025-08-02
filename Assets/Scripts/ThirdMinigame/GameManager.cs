@@ -10,7 +10,7 @@ namespace ThirdMinigame
         [SerializeField] private GameObject playerCamera;
         [SerializeField] private float fadeDuration = 0.5f;
         
-        private Vector3 _playerStartPosition;
+        private Vector3 _playerStartPosition;   
         private PlayerMovement _playerMovement;
         private Camera _cameraComponent;
         
