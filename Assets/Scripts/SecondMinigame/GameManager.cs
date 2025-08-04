@@ -26,7 +26,7 @@ namespace SecondMinigame
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            cameraComponent.fieldOfView = 0f;
+            cameraComponent.fieldOfView = 0.01f;
             
             SceneManager.LoadScene("Scenes/ThirdMinigame");
         }
