@@ -20,11 +20,9 @@ namespace SecondMinigame
             else
             {
                 nextTarget.tag = "OpenBuilding";
-                Debug.Log("Next target is " + nextTargetName + "!");
+                UIManager.Instance.ChangeCurrentTargetBuilding(nextTargetName);
             }
             tag = "ClosedBuilding";
         }
-
-        
     }
 }
