@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+
 
 namespace SecondMinigame
 {
@@ -13,7 +15,7 @@ namespace SecondMinigame
             if (!nextTarget)
             {
                 Debug.Log("Win!");
-                //MiniGame end
+                StartCoroutine(GameManager.Instance.MoveToNextScene());
             }
             else
             {
@@ -22,5 +24,7 @@ namespace SecondMinigame
             }
             tag = "ClosedBuilding";
         }
+
+        
     }
 }
