@@ -26,7 +26,6 @@ namespace FirstMinigame
             {
                 float newOrthographicSize = Mathf.Lerp(4f, 0.01f, elapsedTime / 1);
                 cameraComponent.orthographicSize = newOrthographicSize;
-
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }

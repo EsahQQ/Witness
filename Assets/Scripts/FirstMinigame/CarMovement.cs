@@ -17,7 +17,7 @@ namespace FirstMinigame
         {
             if (!other.CompareTag("CarReseter")) return;
             canMove = false;
-            transform.position = new Vector3(10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(12, transform.position.y, transform.position.z);
         }
     
     }
