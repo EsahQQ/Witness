@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1ad98301b19f4848ba3ec006910adb6
+guid: b79e519cfb73646438bd2600983ae90f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,18 +31,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running Tired
+      name: Fast Run
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 69
-      lastFrame: 210
+      firstFrame: 0
+      lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
