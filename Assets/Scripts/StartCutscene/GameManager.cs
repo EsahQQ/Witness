@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace StartCutscene
 {
@@ -26,6 +27,11 @@ namespace StartCutscene
             }
             blackImage.color = new Color(0, 0, 0, 0);
             blackImage.gameObject.SetActive(false);
+        }
+
+        public void NextScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
