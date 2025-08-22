@@ -3,13 +3,16 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 namespace SecondMinigame
 {
     public class UIManager : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI targetText;
-        
+        [SerializeField] private GameObject notePanel;
+         
         public static UIManager Instance { get; private set; }
 
         private void Awake()
@@ -19,6 +22,12 @@ namespace SecondMinigame
 
         public void ChangeCurrentTargetBuilding(string nextTargetName)
         {
+            notePanel.SetActive(true);
+            while (!Input.GetKeyDown(KeyCode.Space))
+            {
+                
+            }
+            notePanel.SetActive(false);
             StartCoroutine(ChangeTargetBuildingText(nextTargetName));
         }
 
