@@ -19,8 +19,11 @@ namespace SecondMinigame
         private State _currentState;
         private bool _isTurnedRight = true;
         private bool _isIdle;
+        
+        public static EnemyNav Instance { get; private set; }
         public event EventHandler<State> OnStateSwitch;
         public event EventHandler OnEnemyTurn;
+        public bool IsChasing;
 
         public enum State
         {
@@ -33,6 +36,7 @@ namespace SecondMinigame
         {
             _agent = GetComponent<NavMeshAgent>();
             _agent.updateRotation = false;
+            Instance = this;
         }
 
         private void Start()
@@ -40,11 +44,13 @@ namespace SecondMinigame
             _elapsedTime = checkTimer;
             _player = PlayerController.Instance;
         }
-
+        
         private void Update()
         {
+            if (_agent.isStopped)
+                return;
             CheckCurrentState();
-            
+
             switch (_currentState)
             {
                 case State.Roaming:
@@ -55,6 +61,7 @@ namespace SecondMinigame
                     break;
             }
             
+            IsChasing = (_currentState == State.Chasing);
         }
 
         private void OnTriggerEnter(Collider other)

@@ -9,6 +9,7 @@ namespace SecondMinigame
     {
         [SerializeField] private GameObject nextTarget;
         [SerializeField] private string nextTargetName;
+        [SerializeField] private string noteText;
         
         public void Interact()
         {
@@ -20,7 +21,7 @@ namespace SecondMinigame
             else
             {
                 nextTarget.tag = "OpenBuilding";
-                UIManager.Instance.ChangeCurrentTargetBuilding(nextTargetName);
+                UIManager.Instance.ChangeCurrentTargetBuilding(nextTargetName, noteText);
             }
             tag = "ClosedBuilding";
         }

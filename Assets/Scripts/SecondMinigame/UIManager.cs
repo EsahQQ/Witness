@@ -12,7 +12,8 @@ namespace SecondMinigame
     {
         [SerializeField] private TextMeshProUGUI targetText;
         [SerializeField] private GameObject notePanel;
-         
+        private TextMeshProUGUI _noteText;
+        
         public static UIManager Instance { get; private set; }
 
         private void Awake()
@@ -20,19 +21,22 @@ namespace SecondMinigame
             Instance = this;
         }
 
-        public void ChangeCurrentTargetBuilding(string nextTargetName)
+        private void Start()
         {
-            notePanel.SetActive(true);
-            while (!Input.GetKeyDown(KeyCode.Space))
-            {
-                
-            }
-            notePanel.SetActive(false);
-            StartCoroutine(ChangeTargetBuildingText(nextTargetName));
+            _noteText = notePanel.GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        private IEnumerator ChangeTargetBuildingText(string nextTargetName)
+        public void ChangeCurrentTargetBuilding(string nextTargetName, string noteText)
         {
+            StartCoroutine(ChangeTargetBuildingText(nextTargetName, noteText));
+        }
+
+        private IEnumerator ChangeTargetBuildingText(string nextTargetName, string noteText)
+        {
+            _noteText.text = noteText;
+            notePanel.SetActive(true);
+			yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            notePanel.SetActive(false);
             float elapsedTime = 0f;
             while (elapsedTime < 1f)
             {

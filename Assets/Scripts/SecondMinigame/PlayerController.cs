@@ -26,7 +26,8 @@ namespace SecondMinigame
             if (!_currentInteractable) return;
             if (Input.GetKeyDown(KeyCode.E) && _currentInteractable.CompareTag("OpenBuilding"))
             {
-                _currentInteractable.GetComponent<IInteractable>().Interact();
+                if (!EnemyNav.Instance.IsChasing)
+                    _currentInteractable.GetComponent<IInteractable>().Interact();
             }
             else if (Input.GetKeyDown(KeyCode.F))
             {
