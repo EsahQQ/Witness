@@ -12,12 +12,12 @@ namespace ThirdMinigame
         [SerializeField] private GameObject playerCamera;
         [SerializeField] private float fadeDuration = 0.5f;
         [SerializeField] private int coinsOnLevel = 24;
-        [SerializeField] private Image blackImage;
         
         private Vector3 _playerStartPosition;   
         private PlayerMovement _playerMovement;
         private Camera _cameraComponent;
         private int _levelsCompleted;
+        private bool _isTransitioning;
         
         public static GameManager Instance { get; private set; }
 
@@ -31,18 +31,19 @@ namespace ThirdMinigame
         private void Start()
         {
             _playerStartPosition = player.transform.position;
-            blackImage.color = new Color(0, 0, 0, 1);
-            StartCoroutine(OpenScene());
         }
 
         public void CompleteLevel(int coinsCollected)
         {
+            if (_isTransitioning) return;
+            
             if (coinsCollected == coinsOnLevel)
             {
                 _levelsCompleted++;
                 if (_levelsCompleted == 5)
                 {
-                    StartCoroutine(MoveToNextScene());
+                    _isTransitioning = true;
+                    SceneTransitionManager.Instance.LoadScene("Scenes/EndCutscene");
                 }
                 else
                 {
@@ -90,38 +91,6 @@ namespace ThirdMinigame
             _cameraComponent.farClipPlane = originalFarClip;
             
             _playerMovement.CanMove = true;
-        }
-        
-        private IEnumerator MoveToNextScene()
-        {
-            blackImage.gameObject.SetActive(true);
-            float elapsedTime = 0;
-            while (elapsedTime < 3)
-            {
-                float newAlpha = Mathf.Lerp(0, 1, elapsedTime / 3);
-                blackImage.color = new Color(0, 0, 0, newAlpha);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            blackImage.color = new Color(0, 0, 0, 1);
-            blackImage.gameObject.SetActive(false);
-            
-            SceneManager.LoadScene("Scenes/EndCutscene");
-        }
-        
-        private IEnumerator OpenScene()
-        {
-            blackImage.gameObject.SetActive(true);
-            float elapsedTime = 0;
-            while (elapsedTime < 3)
-            {
-                float newAlpha = Mathf.Lerp(1, 0, elapsedTime / 3);
-                blackImage.color = new Color(0, 0, 0, newAlpha);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            blackImage.color = new Color(0, 0, 0, 0);
-            blackImage.gameObject.SetActive(false);
         }
     }
 }

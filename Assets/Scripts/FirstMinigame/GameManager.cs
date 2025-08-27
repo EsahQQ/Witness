@@ -10,52 +10,19 @@ namespace FirstMinigame
     {
         [SerializeField] private Camera cameraComponent;
         [SerializeField] private float timeToWin = 60f;
-        [SerializeField] private Image blackImage;
-        private float _elapsedTime = 0f;
-
-        private void Start()
-        {
-            blackImage.color = new Color(0, 0, 0, 1);
-            StartCoroutine(OpenScene());
-        }
-
+        private float _elapsedTime;
+        private bool _isTransitioning;
+        
         private void Update()
         {
+            if (_isTransitioning) return;
+            
             _elapsedTime += Time.deltaTime;
             if (_elapsedTime >= timeToWin)
-                StartCoroutine(MoveToNextScene());
-        }
-
-        private IEnumerator MoveToNextScene()
-        {
-            blackImage.gameObject.SetActive(true);
-            float elapsedTime = 0;
-            while (elapsedTime < 3)
             {
-                float newAlpha = Mathf.Lerp(0, 1, elapsedTime / 3);
-                blackImage.color = new Color(0, 0, 0, newAlpha);
-                elapsedTime += Time.deltaTime;
-                yield return null;
+                _isTransitioning = true;
+                SceneTransitionManager.Instance.LoadScene("Scenes/Main");
             }
-            blackImage.color = new Color(0, 0, 0, 1);
-            blackImage.gameObject.SetActive(false);
-            
-            SceneManager.LoadScene("Scenes/Main");
-        }
-        
-        private IEnumerator OpenScene()
-        {
-            blackImage.gameObject.SetActive(true);
-            float elapsedTime = 0;
-            while (elapsedTime < 3)
-            {
-                float newAlpha = Mathf.Lerp(1, 0, elapsedTime / 3);
-                blackImage.color = new Color(0, 0, 0, newAlpha);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            blackImage.color = new Color(0, 0, 0, 0);
-            blackImage.gameObject.SetActive(false);
         }
     }
 }
