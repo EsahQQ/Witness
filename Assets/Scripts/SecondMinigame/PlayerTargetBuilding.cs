@@ -16,7 +16,7 @@ namespace SecondMinigame
             if (!nextTarget)
             {
                 Debug.Log("Win!");
-                StartCoroutine(GameManager.Instance.MoveToNextScene());
+                GameManager.Instance.MinigameWin();
             }
             else
             {

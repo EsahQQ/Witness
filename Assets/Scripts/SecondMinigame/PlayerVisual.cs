@@ -42,7 +42,6 @@ namespace SecondMinigame
         {
             _skeletalActive = !_skeletalActive;
             skeletal.SetActive(_skeletalActive);
-            Debug.Log("Player is hidden");
         }
     }
 }
