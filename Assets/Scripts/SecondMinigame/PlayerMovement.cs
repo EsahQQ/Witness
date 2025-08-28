@@ -58,7 +58,8 @@ namespace SecondMinigame
         private void OnPlayerHide(object sender, EventArgs e)
         {
             _canMove = !_canMove;
-            IsRunning = !IsRunning;
+            if (IsRunning)
+                IsRunning = false;
         }
 
         private Vector3 GetMovementVector()

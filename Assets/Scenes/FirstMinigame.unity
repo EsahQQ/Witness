@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.9
@@ -202,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_Name
       value: Props_Bench_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_LocalScale.x
@@ -920,6 +932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_small (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.34
@@ -1035,6 +1051,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.75
@@ -1078,6 +1102,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1239,6 +1271,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
       propertyPath: m_Name
       value: Props_Roof_prop (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
       propertyPath: m_LocalScale.x
@@ -1420,6 +1456,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_Name
       value: Props_Bench_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1837,7 +1877,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   m_Layer: 0
   m_Name: Main Camera
@@ -1846,14 +1885,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -2333,6 +2364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.1
@@ -2509,6 +2544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.733
@@ -2622,6 +2661,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2750,6 +2793,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2927,6 +2974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.51
@@ -2983,6 +3034,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3041,6 +3096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Big Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.831615
@@ -3098,6 +3157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.56
@@ -3151,6 +3214,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.25
@@ -3194,6 +3265,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3530,6 +3609,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4038,6 +4121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Roof_prop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -4421,6 +4508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2
@@ -4477,6 +4568,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_Big (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4535,6 +4630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1354265
@@ -4591,6 +4690,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4795,6 +4898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.27
@@ -4851,6 +4958,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_Big (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5371,6 +5482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.98
@@ -5477,6 +5592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_small (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.24
@@ -5538,6 +5657,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5653,6 +5776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.82
@@ -5709,6 +5836,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6350,6 +6481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Bench_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -6481,6 +6616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -6567,6 +6706,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6868,6 +7011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.25
@@ -6929,6 +7076,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
       propertyPath: m_Name
       value: Road Lane_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
       propertyPath: m_LocalScale.x
@@ -7000,6 +7151,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.25
@@ -7044,6 +7203,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetLight (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7060,6 +7227,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_Big (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7191,6 +7362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.45
@@ -7247,6 +7422,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
       propertyPath: m_Name
       value: Road Lane_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 85348f60323277544b2b17a2d5c20f17, type: 3}
       propertyPath: m_LocalScale.x
@@ -7372,6 +7551,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+--- !u!1 &1153227409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153227411}
+  - component: {fileID: 1153227410}
+  m_Layer: 0
+  m_Name: SoundTrack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1153227410
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153227409}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 91abb92fe03fde548911eb46ab8101f7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 91abb92fe03fde548911eb46ab8101f7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1153227411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153227409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.14141, y: 0.65748, z: 1.98188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1153848344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
@@ -7467,6 +7775,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7587,6 +7899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.064
@@ -7640,6 +7956,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.25
@@ -7683,6 +8007,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7855,6 +8187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Roof_prop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -7930,6 +8266,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.75
@@ -7973,6 +8317,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8083,6 +8435,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8365,6 +8721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Roof_prop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 918397a7e0523114ea408fc4eb8ca157, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -8433,6 +8793,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8557,6 +8921,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8734,6 +9102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.9
@@ -8858,6 +9230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.9
@@ -8924,6 +9300,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9131,6 +9511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.83
@@ -9198,6 +9582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_Big (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.22
@@ -9254,6 +9642,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9609,6 +10001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Grass Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b74c48c2e73e17c418c9394124b75daf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b74c48c2e73e17c418c9394124b75daf, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2195
@@ -9674,6 +10070,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
       propertyPath: m_Name
       value: Road Sidewalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
       propertyPath: m_LocalScale.x
@@ -9878,7 +10278,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1484938981
 MeshCollider:
@@ -10222,6 +10622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.81
@@ -10350,6 +10754,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
       propertyPath: m_Name
       value: Road Sidewalk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3181f15579d1b0c46872c9980226268b, type: 3}
       propertyPath: m_LocalScale.x
@@ -10495,6 +10903,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10881,6 +11293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.62
@@ -10943,6 +11359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.38
@@ -11001,6 +11421,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.25
@@ -11045,6 +11473,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetLight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11061,6 +11497,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_small (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11400,6 +11840,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.75
@@ -11443,6 +11891,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11535,6 +11991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.13
@@ -11607,6 +12067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0581763
@@ -11664,6 +12128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.48
@@ -11720,6 +12188,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_Big (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11782,6 +12254,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11965,6 +12441,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126957897}
     m_Modifications:
+    - target: {fileID: 524082704618008347, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402437715168017680, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323258177582339447, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.75
@@ -12008,6 +12492,14 @@ PrefabInstance:
     - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
       propertyPath: m_Name
       value: StreetLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673593847440591667, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501914654980757715, guid: 6eeaa69c15dde914498203f663ff1aee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12098,6 +12590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building Sky_big_color02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 694e1313d3f12e84aaf959ff6960ddaf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -12172,6 +12668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_Big
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7809353
@@ -12228,6 +12728,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_Big (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12286,6 +12790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1193881
@@ -12343,6 +12851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.06
@@ -12399,6 +12911,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12466,6 +12982,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12600,6 +13120,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_Name
       value: Natures_Rock_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12793,6 +13317,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_Name
       value: Props_Bench_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62125825e49febf4a89f76daf85d9ca7, type: 3}
       propertyPath: m_LocalScale.x
@@ -12989,6 +13517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Bush_02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f75f232634166cc459a69e7fd7a30880, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0581763
@@ -13045,6 +13577,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13177,6 +13713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Natures_Rock_small (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ec25066ec33fa84d9227e27c5f5a8a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.1
@@ -13258,6 +13798,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_Name
       value: Natures_Bush_03 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47ea3e3caeb3c2845bbd9339bdc7a282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14412,6 +14956,7 @@ GameObject:
   - component: {fileID: 6075117793322982149}
   - component: {fileID: 8599683072298472450}
   - component: {fileID: 446469642599569337}
+  - component: {fileID: 8599683072298472451}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16868,6 +17413,14 @@ MonoBehaviour:
   moveAmount: 1.25
   linesAmount: 4
   currentLine: 2
+--- !u!81 &8599683072298472451
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053518113598356996}
+  m_Enabled: 1
 --- !u!114 &8726882390082134235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16950,3 +17503,4 @@ SceneRoots:
   - {fileID: 2029208233}
   - {fileID: 611449838}
   - {fileID: 639305540}
+  - {fileID: 1153227411}

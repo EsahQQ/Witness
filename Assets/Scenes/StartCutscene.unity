@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.3
+  m_AmbientIntensity: 0.2
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: d15393048079d3d478783c3dc0160f0d, type: 2}
@@ -217,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 5101019715810894179, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: m_Name
       value: SceneTransitionManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101019715810894179, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8839155059359583924, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4419,7 +4423,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.66042185, g: 0.8399421, b: 0.9150943, a: 1}
+  m_Color: {r: 0.062299743, g: 0.5283019, b: 0.461052, a: 1}
   m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
@@ -4634,7 +4638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e1a6c8978091c4aa61748038454eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackImage: {fileID: 153456227}
 --- !u!4 &1222417116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2100f10c342364479e7a527f9ef5429, type: 3}
