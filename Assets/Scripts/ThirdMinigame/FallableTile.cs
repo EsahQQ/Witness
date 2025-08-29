@@ -16,9 +16,9 @@ namespace ThirdMinigame
         private IEnumerator TileFall()
         {
             float elapsedTime = 0;
-            while (elapsedTime < 2)
+            while (elapsedTime < fallDuration)
             {
-                float newY = Mathf.Lerp(0.25f, -5, elapsedTime / 2);
+                float newY = Mathf.Lerp(0.25f, -5, elapsedTime / fallDuration);
                 transform.position = new Vector3(transform.position.x, newY, transform.position.z);
                 elapsedTime += Time.deltaTime;
                 yield return null;

@@ -10,12 +10,17 @@ namespace ThirdMinigame
     {
         [SerializeField] private GameObject player;
         [SerializeField] private GameObject playerCamera;
+        
         [SerializeField] private float fadeDuration = 0.5f;
-        [SerializeField] private int coinsOnLevel = 24;
+        [SerializeField] private float levelTransitionOffset = 20f;
+        [SerializeField] private int totalLevels = 5;
         
         private Vector3 _playerStartPosition;   
         private PlayerMovement _playerMovement;
         private Camera _cameraComponent;
+
+        private int _coinsOnLevel = 24;
+        private int _coinsCollected;
         private int _levelsCompleted;
         private bool _isTransitioning;
         
@@ -31,29 +36,41 @@ namespace ThirdMinigame
         private void Start()
         {
             _playerStartPosition = player.transform.position;
+            LevelExit.OnPlayerExit += HandlePlayerExit;
+            Coin.OnCoinCollected += HandleCoinCollected;
         }
 
-        public void CompleteLevel(int coinsCollected)
+        private void HandleCoinCollected(object sender, EventArgs e)
         {
-            if (_isTransitioning) return;
-            
-            if (coinsCollected == coinsOnLevel)
+            _coinsCollected++;
+        }
+
+        private void HandlePlayerExit(object sender, EventArgs e)
+        {
+            if (_coinsCollected == _coinsOnLevel)
             {
-                _levelsCompleted++;
-                if (_levelsCompleted == 5)
-                {
-                    _isTransitioning = true;
-                    SceneTransitionManager.Instance.LoadScene("Scenes/EndCutscene");
-                }
-                else
-                {
-                    StartCoroutine(TransitionToNextLevel());
-                    coinsOnLevel--;
-                }
+                CompleteLevel();
             }
             else
             {
-                Debug.Log($"Not enough coins ({coinsCollected}, {coinsOnLevel})");
+                Debug.Log($"Not enough coins ({_coinsCollected}, {_coinsOnLevel})");
+            }
+        }
+
+        private void CompleteLevel()
+        {
+            if (_isTransitioning) return;
+            _levelsCompleted++;
+            if (_levelsCompleted == totalLevels)
+            {
+                _isTransitioning = true;
+                SceneTransitionManager.Instance.LoadScene("Scenes/EndCutscene");
+            }
+            else
+            {
+                _coinsOnLevel--;
+                _coinsCollected = 0;
+                StartCoroutine(TransitionToNextLevel());
             }
         }
         
@@ -74,9 +91,9 @@ namespace ThirdMinigame
             }
             _cameraComponent.farClipPlane = 0f;
             
-            player.transform.position = new Vector3(_playerStartPosition.x - 20, _playerStartPosition.y, _playerStartPosition.z);
+            player.transform.position = new Vector3(_playerStartPosition.x - levelTransitionOffset, _playerStartPosition.y, _playerStartPosition.z);
             _playerStartPosition = player.transform.position;
-            playerCamera.transform.position = new Vector3(playerCamera.transform.position.x - 20, playerCamera.transform.position.y, playerCamera.transform.position.z);
+            playerCamera.transform.position = new Vector3(playerCamera.transform.position.x - levelTransitionOffset, playerCamera.transform.position.y, playerCamera.transform.position.z);
             
             elapsedTime = 0f;
 
