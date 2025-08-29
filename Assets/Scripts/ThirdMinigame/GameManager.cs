@@ -54,6 +54,7 @@ namespace ThirdMinigame
             else
             {
                 Debug.Log($"Not enough coins ({_coinsCollected}, {_coinsOnLevel})");
+                RestartMinigame();
             }
         }
 
@@ -108,6 +109,13 @@ namespace ThirdMinigame
             _cameraComponent.farClipPlane = originalFarClip;
             
             _playerMovement.CanMove = true;
+        }
+
+        private void RestartMinigame()
+        {
+            _coinsCollected = 0;
+            _coinsOnLevel = 24;
+            SceneTransitionManager.Instance.LoadScene("Scenes/ThirdMinigame");
         }
     }
 }
