@@ -40,6 +40,12 @@ namespace ThirdMinigame
             Coin.OnCoinCollected += HandleCoinCollected;
         }
 
+        private void OnDestroy()
+        {
+            LevelExit.OnPlayerExit -= HandlePlayerExit;
+            Coin.OnCoinCollected -= HandleCoinCollected;
+        }
+
         private void HandleCoinCollected(object sender, EventArgs e)
         {
             _coinsCollected++;

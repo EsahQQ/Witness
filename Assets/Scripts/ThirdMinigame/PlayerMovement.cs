@@ -32,6 +32,7 @@ namespace ThirdMinigame
         private void OnDestroy()
         {
             _playerInputActions.Player.Move.started -= PlayerMove;
+            _playerInputActions.Disable();
         }
 
         private void PlayerMove(InputAction.CallbackContext obj)
