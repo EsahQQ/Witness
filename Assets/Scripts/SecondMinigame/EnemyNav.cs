@@ -24,7 +24,7 @@ namespace SecondMinigame
         public event EventHandler<State> OnStateSwitch;
         public event EventHandler OnEnemyTurn;
         public event EventHandler OnPlayerDeath;
-        public bool IsChasing;
+        public bool IsChasing { get; private set; }
 
         public enum State
         {

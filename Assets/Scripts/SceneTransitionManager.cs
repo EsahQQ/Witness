@@ -29,7 +29,12 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        StartCoroutine(FadeOutAndLoad(sceneName));
+        StartCoroutine(FadeOutAndLoad(sceneName, fadeDuration));
+    }
+    
+    public void LoadScene(string sceneName, float customFadeDuration)
+    {
+        StartCoroutine(FadeOutAndLoad(sceneName, customFadeDuration));
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -37,14 +42,14 @@ public class SceneTransitionManager : MonoBehaviour
         StartCoroutine(FadeIn());
     }
     
-    private IEnumerator FadeOutAndLoad(string sceneName)
+    private IEnumerator FadeOutAndLoad(string sceneName, float duration)
     {
         blackImage.gameObject.SetActive(true);
         
         float elapsedTime = 0;
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < duration)
         {
-            float newAlpha = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
+            float newAlpha = Mathf.Lerp(0, 1, elapsedTime / duration);
             blackImage.color = new Color(0, 0, 0, newAlpha);
             elapsedTime += Time.deltaTime;
             yield return null;
