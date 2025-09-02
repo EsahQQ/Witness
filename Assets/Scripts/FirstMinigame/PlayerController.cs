@@ -29,7 +29,6 @@ namespace FirstMinigame
                 OnPlayerDeath?.Invoke(this, EventArgs.Empty);
                 _boxCollider.enabled = false;
             }
-            Debug.Log("Player HP: " + playerHealth);
         }
     }
 }
