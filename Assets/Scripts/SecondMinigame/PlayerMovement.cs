@@ -51,8 +51,13 @@ namespace SecondMinigame
 
         private void FixedUpdate()
         {
-            if (!_canMove) return; 
-            _rigidbody.MovePosition(_rigidbody.position + _currentInputVector * (Time.fixedDeltaTime * moveSpeed));
+            if (!_canMove)
+            {
+                _rigidbody.linearVelocity =  Vector3.zero;
+                return;
+            } 
+            Vector3 targetVelocity = new Vector3(_currentInputVector.x * moveSpeed, _rigidbody.linearVelocity.y, _currentInputVector.z * moveSpeed);
+            _rigidbody.linearVelocity = targetVelocity;
         }
 
         private void OnDestroy()

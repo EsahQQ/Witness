@@ -30,7 +30,7 @@ namespace SecondMinigame
         
         private void ReloadScene(object sender, EventArgs e)
         {
-            SceneTransitionManager.Instance.LoadScene("Scenes/Main");
+            SceneTransitionManager.Instance.LoadScene("Scenes/Main", 0.25f);
         }
     }
 }

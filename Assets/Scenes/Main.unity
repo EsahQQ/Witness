@@ -706,7 +706,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068137183755023738, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: fadeDuration
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5101019715810894179, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: m_Name
@@ -8221,6 +8221,7 @@ GameObject:
   - component: {fileID: 850023030}
   - component: {fileID: 850023033}
   - component: {fileID: 850023034}
+  - component: {fileID: 850023035}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -8352,8 +8353,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5001256, y: 2.2166052, z: 0.90264165}
-  m_Center: {x: 0.8538164, y: 1.1083026, z: -0.3540298}
+  m_Size: {x: 3.5001256, y: 2.2166052, z: 1.2608116}
+  m_Center: {x: 0.8538164, y: 1.1083026, z: -0.5331146}
+--- !u!65 &850023035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850023028}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.5858874, y: 2.2166052, z: 0.3842846}
+  m_Center: {x: 1.3693373, y: 1.1083026, z: -0.094851315}
 --- !u!1001 &852800656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24151,7 +24173,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053518115015744805}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a563fec9f73fda4438c6ee60e3a632c0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -24623,7 +24645,6 @@ MonoBehaviour:
   minMoveDistance: 15
   maxMoveDistance: 25
   chasingDistance: 5
-  IsChasing: 0
 --- !u!195 &8611733183679035069
 NavMeshAgent:
   m_ObjectHideFlags: 0
