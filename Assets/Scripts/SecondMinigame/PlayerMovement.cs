@@ -54,7 +54,13 @@ namespace SecondMinigame
             if (!_canMove) return; 
             _rigidbody.MovePosition(_rigidbody.position + _currentInputVector * (Time.fixedDeltaTime * moveSpeed));
         }
-        
+
+        private void OnDestroy()
+        {
+            PlayerController.Instance.OnPlayerHide -= OnPlayerHide;
+            _playerInputActions.Disable();
+        }
+
         private void OnPlayerHide(object sender, EventArgs e)
         {
             _canMove = !_canMove;

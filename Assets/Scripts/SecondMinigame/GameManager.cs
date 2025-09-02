@@ -17,10 +17,20 @@ namespace SecondMinigame
         {
             Instance = this;
         }
+
+        private void Start()
+        {
+            EnemyNav.Instance.OnPlayerDeath += ReloadScene;
+        }
         
         public void MinigameWin()
         {
             SceneTransitionManager.Instance.LoadScene("Scenes/ThirdMinigame");
+        }
+        
+        private void ReloadScene(object sender, EventArgs e)
+        {
+            SceneTransitionManager.Instance.LoadScene("Scenes/Main");
         }
     }
 }

@@ -23,6 +23,7 @@ namespace SecondMinigame
         public static EnemyNav Instance { get; private set; }
         public event EventHandler<State> OnStateSwitch;
         public event EventHandler OnEnemyTurn;
+        public event EventHandler OnPlayerDeath;
         public bool IsChasing;
 
         public enum State
@@ -66,7 +67,7 @@ namespace SecondMinigame
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("GameOver");
+            OnPlayerDeath?.Invoke(this, EventArgs.Empty);
         }
 
         private void CheckCurrentState()
