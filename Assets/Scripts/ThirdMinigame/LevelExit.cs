@@ -5,12 +5,15 @@ namespace ThirdMinigame
 {
     public class LevelExit : MonoBehaviour
     {
+        [SerializeField] private Door door;
         public static event EventHandler OnPlayerExit;
     
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
+            {
                 OnPlayerExit?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }

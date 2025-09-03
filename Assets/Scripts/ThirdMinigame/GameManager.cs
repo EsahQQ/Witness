@@ -84,6 +84,7 @@ namespace ThirdMinigame
         private IEnumerator TransitionToNextLevel()
         {
             _playerMovement.CanMove = false;
+            yield return new WaitForSeconds(1);
             
             float originalFarClip = _cameraComponent.farClipPlane;
             float elapsedTime = 0f;

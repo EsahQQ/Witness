@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThirdMinigame.unity
     guid: c54c85816ee7bf94f969cb0f5f2fb408
+  - enabled: 1
+    path: Assets/Scenes/EndCutscene.unity
+    guid: 2b7d34b8bab8cb14d8a68a775771d501
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2d9f5bc5ce4472849a88403678f7c409, type: 3}
   m_UseUCBPForAssetBundles: 0
