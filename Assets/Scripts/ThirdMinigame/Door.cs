@@ -7,39 +7,37 @@ namespace ThirdMinigame
 	[RequireComponent(typeof(AudioSource))]
 	public class Door : MonoBehaviour
 	{
-		private bool inDoor = false;
-		public bool open;
-		public float smooth = 1.0f;
-		float DoorOpenAngle = -90.0f;
-	    float DoorCloseAngle = 00.0f;
-		public AudioSource asource;
-		public AudioClip openDoor,closeDoor;
-		// Use this for initialization
-		void Start () {
+		private bool _inDoor;
+		[SerializeField] private bool isOpen;
+		[SerializeField] private float smooth = 1.0f;
+		[SerializeField] private float doorOpenAngle = -90.0f;
+		[SerializeField] private float doorCloseAngle = 00.0f;
+		[SerializeField] private AudioSource asource;
+		[SerializeField] private AudioClip openDoor;
+		[SerializeField] private AudioClip closeDoor;
+		
+		private void Start () {
 			asource = GetComponent<AudioSource> ();
 		}
 		
-		// Update is called once per frame
-		void Update () {
-			if (open)
+		private void Update () {
+			if (isOpen)
 			{
-	            var target = Quaternion.Euler (0, DoorOpenAngle, 0);
+	            var target = Quaternion.Euler (0, doorOpenAngle, 0);
 	            transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * 5 * smooth);
-		
 			}
 			else
 			{
-	            var target1= Quaternion.Euler (0, DoorCloseAngle, 0);
+	            var target1= Quaternion.Euler (0, doorCloseAngle, 0);
 	            transform.localRotation = Quaternion.Slerp(transform.localRotation, target1, Time.deltaTime * 5 * smooth);
-		
 			}  
 		}
 
 		private void OnTriggerEnter(Collider other)
 		{
-			if (inDoor) return;
+			if (_inDoor) return;
 			
-			inDoor = true;
+			_inDoor = true;
 			if (other.CompareTag("Player"))
 				StartCoroutine(DoorOpenRoutine());
 		}
@@ -52,8 +50,8 @@ namespace ThirdMinigame
 		}
 
 		private void OpenDoor(){
-			open =!open;
-			asource.clip = open?openDoor:closeDoor;
+			isOpen =!isOpen;
+			asource.clip = isOpen?openDoor:closeDoor;
 			asource.Play ();
 		}
 	}

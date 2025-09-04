@@ -12,7 +12,7 @@ namespace ThirdMinigame
         [SerializeField] private LayerMask groundLayer;
         
         private SceneThreeInput _playerInputActions;
-        private bool _isMoving = false;
+        private bool _isMoving;
         public bool CanMove { get; set; } = true;
         
         public event EventHandler<Vector3> OnPlayerMove;
