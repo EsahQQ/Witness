@@ -10,6 +10,7 @@ namespace FirstMinigame
     {
         [SerializeField] private Camera cameraComponent;
         [SerializeField] private float timeToWin = 60f;
+        [SerializeField] private Slider slider;
         private float _elapsedTime;
         private bool _isTransitioning;
 
@@ -23,6 +24,7 @@ namespace FirstMinigame
             if (_isTransitioning) return;
             
             _elapsedTime += Time.deltaTime;
+            slider.value = _elapsedTime;
             if (_elapsedTime >= timeToWin)
             {
                 _isTransitioning = true;
