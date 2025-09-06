@@ -21,6 +21,8 @@ namespace SecondMinigame
             else
             {
                 nextTarget.tag = "OpenBuilding";
+                var eButton = nextTarget.transform.Find("E");
+                eButton.gameObject.SetActive(true);
                 UIManager.Instance.ChangeCurrentTargetBuilding(nextTargetName, noteText);
             }
             tag = "ClosedBuilding";

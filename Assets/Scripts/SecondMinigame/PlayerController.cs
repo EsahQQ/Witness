@@ -27,7 +27,11 @@ namespace SecondMinigame
             if (Input.GetKeyDown(KeyCode.E) && _currentInteractable.CompareTag("OpenBuilding"))
             {
                 if (!EnemyNav.Instance.IsChasing)
+                {
                     _currentInteractable.GetComponent<IInteractable>().Interact();
+                    var fButton =  _currentInteractable.GetComponentInChildren<SpriteRenderer>();
+                    fButton.gameObject.SetActive(false);
+                }
             }
             else if (Input.GetKeyDown(KeyCode.F))
             {
@@ -41,7 +45,7 @@ namespace SecondMinigame
         {
             _currentInteractable = other.gameObject;
 
-            if (_currentInteractable.CompareTag("ClosedBuilding"))
+            if (_currentInteractable.CompareTag("ClosedBuilding") || _currentInteractable.CompareTag("OpenBuilding"))
             {
                 var button = _currentInteractable.GetComponentInChildren<SpriteRenderer>();
                 StartCoroutine(ShowButton(button, button.color.a, 1));
@@ -50,7 +54,7 @@ namespace SecondMinigame
 
         private void OnTriggerExit(Collider other)
         {
-            if (_currentInteractable.CompareTag("ClosedBuilding"))
+            if (_currentInteractable.CompareTag("ClosedBuilding") || _currentInteractable.CompareTag("OpenBuilding"))
             {
                 var button = _currentInteractable.GetComponentInChildren<SpriteRenderer>();
                 StartCoroutine(ShowButton(button, button.color.a, 0));
