@@ -20,7 +20,7 @@ namespace SecondMinigame
 
         private void Start()
         {
-            EnemyNav.Instance.OnPlayerDeath += ReloadScene;
+            //EnemyNav.Instance.OnPlayerDeath += ReloadScene;
         }
         
         public void MinigameWin()

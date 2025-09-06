@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace ThirdMinigame
@@ -11,16 +10,18 @@ namespace ThirdMinigame
 		[SerializeField] private bool isOpen;
 		[SerializeField] private float smooth = 1.0f;
 		[SerializeField] private float doorOpenAngle = -90.0f;
-		[SerializeField] private float doorCloseAngle = 00.0f;
+		[SerializeField] private float doorCloseAngle = 0.0f;
 		[SerializeField] private AudioSource asource;
 		[SerializeField] private AudioClip openDoor;
 		[SerializeField] private AudioClip closeDoor;
 		
-		private void Start () {
+		private void Start () 
+        {
 			asource = GetComponent<AudioSource> ();
 		}
 		
-		private void Update () {
+		private void Update () 
+        {
 			if (isOpen)
 			{
 	            var target = Quaternion.Euler (0, doorOpenAngle, 0);
@@ -51,7 +52,7 @@ namespace ThirdMinigame
 
 		private void OpenDoor(){
 			isOpen =!isOpen;
-			asource.clip = isOpen?openDoor:closeDoor;
+			asource.clip = isOpen ? openDoor : closeDoor;
 			asource.Play ();
 		}
 	}
