@@ -25,7 +25,7 @@ namespace SecondMinigame
         
         public void MinigameWin()
         {
-            SceneTransitionManager.Instance.LoadScene("Scenes/ThirdMinigame");
+            SceneTransitionManager.Instance.LoadScene("Scenes/2nd3rdText");
         }
         
         private void ReloadScene(object sender, EventArgs e)

@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 024d8d4534e0d7e4c87391cc73bc6b6e
   - enabled: 1
+    path: Assets/Scenes/2nd3rdText.unity
+    guid: 6942b8f6f341d0b4ab59f859359f9198
+  - enabled: 1
     path: Assets/Scenes/ThirdMinigame.unity
     guid: c54c85816ee7bf94f969cb0f5f2fb408
   - enabled: 1

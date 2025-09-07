@@ -8,6 +8,8 @@ public class TextTypeEffect : MonoBehaviour
 {
     [TextArea(3, 10)]
     [SerializeField] private string text;
+
+    [SerializeField] private string sceneToLoad;
     private TextMeshProUGUI _textPanel;
     private bool _isTextTypeEnd;
 
@@ -27,7 +29,7 @@ public class TextTypeEffect : MonoBehaviour
             return;
         
         if (Input.anyKeyDown)
-            SceneTransitionManager.Instance.LoadScene("Scenes/Main");
+            SceneTransitionManager.Instance.LoadScene(sceneToLoad);
     }
 
     private IEnumerator WriteText()
