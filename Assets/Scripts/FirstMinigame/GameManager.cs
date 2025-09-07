@@ -28,7 +28,7 @@ namespace FirstMinigame
             if (_elapsedTime >= timeToWin)
             {
                 _isTransitioning = true;
-                SceneTransitionManager.Instance.LoadScene("Scenes/Main");
+                SceneTransitionManager.Instance.LoadScene("Scenes/1st2ndText");
             }
         }
 

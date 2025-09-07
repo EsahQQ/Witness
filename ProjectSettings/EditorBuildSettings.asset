@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstMinigame.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/1st2ndText.unity
+    guid: 603c9bd9c92691848aa8d9cfbddf68f9
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 024d8d4534e0d7e4c87391cc73bc6b6e
   - enabled: 1
