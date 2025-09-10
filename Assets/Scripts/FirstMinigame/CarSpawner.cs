@@ -5,21 +5,49 @@ namespace FirstMinigame
 {
     public class CarSpawner : MonoBehaviour
     {
-        [SerializeField] private float spawnCooldown = 5f;
-        [SerializeField] private List<CarMovement> spawnedCars;
-        [SerializeField] private int linesAmount = 4;
-        private float _elapsedTime;
-    
+        [SerializeField] private float minSpawnCooldown = 1f;
+        [SerializeField] private float maxSpawnCooldown = 3f;
+        [SerializeField] private Transform[] spawnPoints;
+
+        private float _elapsedtime;
+        private float _currentSpawnCooldown;
+        private CarPool _carPool;
+
+        private void Start()
+        {
+            SetCooldown();
+            _carPool = CarPool.Instance;
+        }
 
         private void Update()
         {
-            _elapsedTime += Time.deltaTime;
-            if (_elapsedTime < spawnCooldown) return;
-            _elapsedTime = 0;
-            int randomCarIndex = Random.Range(0, spawnedCars.Count);
-            int randomLineIndex = Random.Range(0, linesAmount);
-            var car = spawnedCars[randomCarIndex];
-            car.canMove = true;
+            _elapsedtime +=  Time.deltaTime;
+            if (_elapsedtime < _currentSpawnCooldown)
+                return;
+
+            SpawnCar();
+            _elapsedtime = 0;
+            SetCooldown();
+        }
+
+        private void SetCooldown()
+        {
+            _currentSpawnCooldown = Random.Range(minSpawnCooldown, maxSpawnCooldown);
+        }
+
+        private void SpawnCar()
+        {
+            GameObject carToSpawn = _carPool.GetPooledObject();
+            if (carToSpawn == null) 
+                return;
+            
+            int randomLineIndex = Random.Range(0, spawnPoints.Length);
+            Transform spawnPoint = spawnPoints[randomLineIndex];
+            
+            carToSpawn.transform.position = spawnPoint.position;
+            carToSpawn.transform.rotation = spawnPoint.rotation;
+            
+            carToSpawn.SetActive(true);
         }
     }
 }
