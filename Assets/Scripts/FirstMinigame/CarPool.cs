@@ -10,13 +10,10 @@ namespace FirstMinigame
         
         private List<GameObject> _pooledObjects;
         public static CarPool Instance {get; private set;}
-
-        private List<GameObject> _availableCars;
+        
         private void Awake()
         {
             Instance = this;
-            
-            _availableCars = new List<GameObject>();
             
             _pooledObjects = new List<GameObject>();
             for (int i = 0; i < poolSize; i++)
@@ -31,19 +28,12 @@ namespace FirstMinigame
         
         public GameObject GetPooledObject()
         {
-            _availableCars.Clear();
-            foreach (GameObject car in _pooledObjects)
+            if (_pooledObjects.Count > 0)
             {
-                if (!car.activeInHierarchy)
-                {
-                    _availableCars.Add(car);
-                }
-            }
-            
-            if (_availableCars.Count > 0)
-            {
-                int randomIndex = Random.Range(0, _availableCars.Count);
-                return _availableCars[randomIndex];
+                int randomIndex = Random.Range(0, _pooledObjects.Count);
+                var car = _pooledObjects[randomIndex];
+                _pooledObjects.RemoveAt(randomIndex);
+                return car;
             }
             
             Debug.LogWarning("No free cars");
@@ -52,6 +42,7 @@ namespace FirstMinigame
         
         public void ReturnObjectToPool(GameObject car)
         {
+            _pooledObjects.Add(car);
             car.SetActive(false);
         }
     }

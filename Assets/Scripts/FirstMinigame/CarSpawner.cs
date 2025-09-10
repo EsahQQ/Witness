@@ -38,8 +38,6 @@ namespace FirstMinigame
         private void SpawnCar()
         {
             GameObject carToSpawn = _carPool.GetPooledObject();
-            if (carToSpawn == null) 
-                return;
             
             int randomLineIndex = Random.Range(0, spawnPoints.Length);
             Transform spawnPoint = spawnPoints[randomLineIndex];
