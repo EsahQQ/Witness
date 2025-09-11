@@ -32550,7 +32550,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Scenes/Titres
+            m_StringArgument: Scenes/thxforplay
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1564229974
@@ -49755,11 +49755,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftArm'\n\tTransform 'Head'\n\tTransform 'LeftForeArm'\n\tTransform
-    'LeftHand'\n\tTransform 'RightShoulder'\n\tTransform 'LeftLeg'\n\tTransform 'RightForeArm'\n\tTransform
-    'Spine01'\n\tTransform 'Spine'\n\tTransform 'neck'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
