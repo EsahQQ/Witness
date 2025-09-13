@@ -44,8 +44,9 @@ namespace SecondMinigame
         {
             _elapsedTime = checkTimer;
             _player = PlayerController.Instance;
+            UIManager.Instance.OnNoteShow += EnemyCantMove;
         }
-        
+
         private void Update()
         {
             if (_agent.isStopped)
@@ -63,6 +64,11 @@ namespace SecondMinigame
             }
             
             IsChasing = (_currentState == State.Chasing);
+        }
+
+        private void OnDestroy()
+        {
+            UIManager.Instance.OnNoteShow -= EnemyCantMove;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -148,6 +154,11 @@ namespace SecondMinigame
                 OnEnemyTurn?.Invoke(this, EventArgs.Empty);
                 _isTurnedRight =  !_isTurnedRight;
             }
+        }
+        
+        private void EnemyCantMove(object sender, EventArgs e)
+        {
+            _agent.speed = _agent.speed != 0.01f ? 0.01f : 3.5f;
         }
     }
 }

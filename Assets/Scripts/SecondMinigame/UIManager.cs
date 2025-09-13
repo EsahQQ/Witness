@@ -13,6 +13,8 @@ namespace SecondMinigame
         [SerializeField] private TextMeshProUGUI targetText;
         [SerializeField] private GameObject notePanel;
         private TextMeshProUGUI _noteText;
+
+        public event EventHandler OnNoteShow;
         
         public static UIManager Instance { get; private set; }
 
@@ -35,8 +37,10 @@ namespace SecondMinigame
         {
             _noteText.text = noteText;
             notePanel.SetActive(true);
+            OnNoteShow?.Invoke(this, EventArgs.Empty);
 			yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             notePanel.SetActive(false);
+            OnNoteShow?.Invoke(this, EventArgs.Empty);
             float elapsedTime = 0f;
             while (elapsedTime < 1f)
             {

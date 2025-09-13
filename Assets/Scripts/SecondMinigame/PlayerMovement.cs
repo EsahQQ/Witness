@@ -29,7 +29,8 @@ namespace SecondMinigame
 
         private void Start()
         {
-            PlayerController.Instance.OnPlayerHide += OnPlayerHide;
+            PlayerController.Instance.OnPlayerHide += PlayerCantMove;
+            UIManager.Instance.OnNoteShow += PlayerCantMove;
         }
 
         private void Update()
@@ -62,11 +63,12 @@ namespace SecondMinigame
 
         private void OnDestroy()
         {
-            PlayerController.Instance.OnPlayerHide -= OnPlayerHide;
+            PlayerController.Instance.OnPlayerHide -= PlayerCantMove;
+            UIManager.Instance.OnNoteShow -= PlayerCantMove;
             _playerInputActions.Disable();
         }
 
-        private void OnPlayerHide(object sender, EventArgs e)
+        private void PlayerCantMove(object sender, EventArgs e)
         {
             _canMove = !_canMove;
             if (IsRunning)
