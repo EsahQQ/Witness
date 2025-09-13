@@ -2300,6 +2300,12 @@ PlayableDirector:
     value: {fileID: 1561818331}
   - key: {fileID: 6501886110870795055, guid: 03b72be0ea34f044d8fe44b02c450313, type: 2}
     value: {fileID: 1775229091}
+  - key: {fileID: 4602360146083524333, guid: 03b72be0ea34f044d8fe44b02c450313, type: 2}
+    value: {fileID: 951810253}
+  - key: {fileID: 7790353524985772418, guid: 03b72be0ea34f044d8fe44b02c450313, type: 2}
+    value: {fileID: 951810253}
+  - key: {fileID: -7292816803032672120, guid: 03b72be0ea34f044d8fe44b02c450313, type: 2}
+    value: {fileID: 951810253}
   m_ExposedReferences:
     m_References:
     - adf05ca07cddb7c4a9181d62a5585b72: {fileID: 1853620337}
@@ -18180,6 +18186,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951051476}
   m_Mesh: {fileID: 4300000, guid: 736724502c2975348b2f19e5e99e1ec5, type: 3}
+--- !u!1 &951810252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951810254}
+  - component: {fileID: 951810253}
+  m_Layer: 0
+  m_Name: TimelineAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &951810253
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951810252}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ec3f2f832348ffc419e93dc414042d56, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &951810254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951810252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 518, y: 291.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953849067
 GameObject:
   m_ObjectHideFlags: 0
@@ -25302,8 +25437,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226066978}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0019893576, y: 0.9046906, z: 0.0042243404, w: -0.42604363}
-  m_LocalPosition: {x: 16.25, y: 1.6700001, z: 4.7800007}
+  m_LocalRotation: {x: 0.2659227, y: -0.13628143, z: 0.038005468, w: 0.9535555}
+  m_LocalPosition: {x: -2.1940007, y: 2.89, z: -12.412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43331,8 +43466,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853620334}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0019893576, y: 0.9046906, z: 0.0042243404, w: -0.42604363}
-  m_LocalPosition: {x: 16.25, y: 1.6700001, z: 4.7800007}
+  m_LocalRotation: {x: 0.2659227, y: -0.13628143, z: 0.038005468, w: 0.9535555}
+  m_LocalPosition: {x: -2.1940007, y: 2.89, z: -12.412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49755,7 +49890,11 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'LeftArm'\n\tTransform 'Head'\n\tTransform 'LeftForeArm'\n\tTransform
+    'LeftHand'\n\tTransform 'RightShoulder'\n\tTransform 'LeftLeg'\n\tTransform 'RightForeArm'\n\tTransform
+    'Spine01'\n\tTransform 'Spine'\n\tTransform 'neck'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -50312,3 +50451,4 @@ SceneRoots:
   - {fileID: 558896369}
   - {fileID: 2055791730}
   - {fileID: 993832991}
+  - {fileID: 951810254}

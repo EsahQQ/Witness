@@ -224,3 +224,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackImage: {fileID: 4251369380116040445}
   fadeDuration: 3
+  audioMixer: {fileID: 24100000, guid: ec3f2f832348ffc419e93dc414042d56, type: 2}
+  masterVolumeParameter: MasterVolume

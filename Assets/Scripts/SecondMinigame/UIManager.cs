@@ -2,9 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
 
 namespace SecondMinigame
 {
