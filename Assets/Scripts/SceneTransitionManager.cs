@@ -68,6 +68,7 @@ public class SceneTransitionManager : MonoBehaviour
     
     private IEnumerator FadeIn()
     {
+        Cursor.visible = false;
         blackImage.gameObject.SetActive(true);
         
         float elapsedTime = 0;
