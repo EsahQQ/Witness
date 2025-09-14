@@ -294,8 +294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -155.80688, y: 0}
-  m_SizeDelta: {x: 311.61, y: 500}
+  m_AnchoredPosition: {x: -223.28247, y: 0}
+  m_SizeDelta: {x: 446.5651, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496565393
 MonoBehaviour:
@@ -310,15 +310,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8dd861a6e819de241bca68a36048a6bd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -484,12 +484,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffa418df0bdb9243b3a98df18e4e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Continuing to run and not realising what was happening I ran into the fairgrounds.
-    That girl came running after me. It was late and the fair was just closing. When
-    I realised that I was locked in the fair and there was only one way out, I went
-    back to where I had come from, but the entrance was already closed. There was
-    no other way out and I was locked in here with that girl. There was a note near
-    the entrance that said that if anyone was left at the fair, the key to the fair
+  text: I ran into the fairgrounds. That girl came running after me. The fair was
+    just closing. When I realised that I was locked in the fair and there was only
+    one way out, I went back to where I had come from, but the entrance was already
+    closed. There was no other way out and I was locked in here with that girl. There
+    was a note that said that if anyone was left at the fair, the key to the fair
     could be found in the drugs shop. I need to get there and not get caught by her.
     I think I can hide in one of the buildings.
   sceneToLoad: Scenes/Main
@@ -740,8 +739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 400}
+  m_AnchoredPosition: {x: -17.439, y: -0.000026703}
+  m_SizeDelta: {x: 411.687, y: 209.2013}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1073784291
 MonoBehaviour:
@@ -767,10 +766,7 @@ MonoBehaviour:
 
 
     Press E near target-building
-    door to interact
-
-
-    WASD to move'
+    door to interact'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

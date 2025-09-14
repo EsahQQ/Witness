@@ -408,14 +408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffa418df0bdb9243b3a98df18e4e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Once I managed to get out of the fair I ran back the way I came, back to
-    where it all started. She ran after me. At that moment, I was completely devastated
-    and I didn't think about anything. I don't know what I was hoping for, but I
-    ran into a high-rise building right near where the murder took place. I got to
-    the top floor and when I realised I wasn't getting out of here, I knew I had
-    to go back down. She was already in the building. The structure of the building
-    isn't simple, so if I move carefully and on the right path, I don't think I'll
-    get caught.
+  text: I ran back the way I came, back to where it all started. She ran after me.
+    I don't know what I was hoping for, but I ran into a high-rise building right
+    near where the murder took place. I got to the top floor and when I realised
+    I wasn't getting out of here, I knew I had to go back down. She was already in
+    the building. The structure of the building isn't simple, so if I move carefully
+    and on the right path, I don't think I'll get caught.
   sceneToLoad: Scenes/ThirdMinigame
 --- !u!1 &621254445
 GameObject:
