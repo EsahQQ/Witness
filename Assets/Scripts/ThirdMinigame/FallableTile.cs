@@ -10,6 +10,8 @@ namespace ThirdMinigame
 
         private void OnTriggerExit(Collider other)
         {
+            var col = GetComponent<BoxCollider>();
+            col.enabled = false;
             StartCoroutine(TileFall());
         }
 
