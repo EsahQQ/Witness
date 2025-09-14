@@ -25,7 +25,7 @@ namespace ThirdMinigame
         private bool _isTransitioning;
         
         public static GameManager Instance { get; private set; }
-
+        
         private void Awake()
         {
             Instance = this;
@@ -118,7 +118,7 @@ namespace ThirdMinigame
             _playerMovement.CanMove = true;
         }
 
-        private void RestartMinigame()
+        public void RestartMinigame()
         {
             _coinsCollected = 0;
             _coinsOnLevel = 24;

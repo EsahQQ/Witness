@@ -62,7 +62,7 @@ namespace ThirdMinigame
         private bool CanMoveToTile(Vector3 direction)
         {
             Vector3 targetPosition = transform.position + direction * tileSize;
-            return Physics.Raycast(targetPosition + Vector3.up * 0.5f, Vector3.down, 1f, groundLayer);
+            return Physics.Raycast(targetPosition + Vector3.up * 0.5f, Vector3.down, 0.5f, groundLayer);
         }
                 
         private IEnumerator MoveToTile(Vector3 direction)
@@ -84,6 +84,23 @@ namespace ThirdMinigame
             transform.position = endPosition;
             _isMoving = false;
             OnPlayerStop?.Invoke(this, EventArgs.Empty);
+            if (!IsPlayerHasTileToMove())
+            {
+                GameManager.Instance.RestartMinigame();
+            }
+        }
+
+        private bool IsPlayerHasTileToMove()
+        {
+            Debug.Log(CanMoveToTile(Vector3.forward));
+            Debug.Log(CanMoveToTile(Vector3.back));
+            Debug.Log(CanMoveToTile(Vector3.right));
+            Debug.Log(CanMoveToTile(Vector3.left));
+            if (CanMoveToTile(Vector3.forward) || CanMoveToTile(Vector3.back) || CanMoveToTile(Vector3.right) || CanMoveToTile(Vector3.left))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
