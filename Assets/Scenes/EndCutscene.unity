@@ -1269,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101019715810894179, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8839155059359583924, guid: c8d72bb3f504d7d4aaf00bf2d5612f61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25437,8 +25437,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226066978}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2659227, y: -0.13628143, z: 0.038005468, w: 0.9535555}
-  m_LocalPosition: {x: -2.1940007, y: 2.89, z: -12.412}
+  m_LocalRotation: {x: 0.0019893576, y: 0.9046906, z: 0.0042243404, w: -0.42604363}
+  m_LocalPosition: {x: 16.25, y: 1.6700001, z: 4.7800007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43466,8 +43466,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853620334}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2659227, y: -0.13628143, z: 0.038005468, w: 0.9535555}
-  m_LocalPosition: {x: -2.1940007, y: 2.89, z: -12.412}
+  m_LocalRotation: {x: 0.0019893576, y: 0.9046906, z: 0.0042243404, w: -0.42604363}
+  m_LocalPosition: {x: 16.25, y: 1.6700001, z: 4.7800007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49890,11 +49890,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftArm'\n\tTransform 'Head'\n\tTransform 'LeftForeArm'\n\tTransform
-    'LeftHand'\n\tTransform 'RightShoulder'\n\tTransform 'LeftLeg'\n\tTransform 'RightForeArm'\n\tTransform
-    'Spine01'\n\tTransform 'Spine'\n\tTransform 'neck'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

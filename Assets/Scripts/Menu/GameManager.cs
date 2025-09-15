@@ -28,5 +28,10 @@ namespace Menu
             
             SceneManager.LoadScene("Scenes/StartCutscene");
         }
+        
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }
