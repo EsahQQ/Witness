@@ -9,7 +9,7 @@ namespace FirstMinigame
         [SerializeField] private float slowedScrollSpeed = 3f;
         [SerializeField] private float slowDownDuration = 3f;
         [SerializeField] private float resetPositionX = -20f;
-        [SerializeField] private float wrapAroundDistance = 40f;
+        [SerializeField] private float wrapAroundDistance = 20f;
 
         private float _currentScrollSpeed;
         private bool _canScroll = true;
