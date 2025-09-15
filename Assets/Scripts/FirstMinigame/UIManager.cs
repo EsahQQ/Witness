@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,15 +12,15 @@ namespace FirstMinigame
         
         private void Start()
         {
-            PlayerController.Instance.OnPlayerTakeDamage += ChangeHeartsCount;
+            PlayerController.Instance.OnPlayerTakeDamage += OnPlayerTakeDamage;
         }
 
         private void OnDestroy()
         {
-            PlayerController.Instance.OnPlayerTakeDamage -= ChangeHeartsCount;
+            PlayerController.Instance.OnPlayerTakeDamage -= OnPlayerTakeDamage;
         }
 
-        private void ChangeHeartsCount(object sender, EventArgs e)
+        private void OnPlayerTakeDamage(object sender, EventArgs e)
         {
             hearts[_currentHeartsCount - 1].color = Color.dimGray;
             _currentHeartsCount--;

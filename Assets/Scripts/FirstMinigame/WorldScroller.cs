@@ -5,27 +5,34 @@ namespace FirstMinigame
 {
     public class WorldScroller : MonoBehaviour
     {
-        [SerializeField] private float scrollSpeed = 5f;
+        [SerializeField] private float normalScrollSpeed = 5f;
+        [SerializeField] private float slowedScrollSpeed = 3f;
+        [SerializeField] private float slowDownDuration = 3f;
+        [SerializeField] private float resetPositionX = -20f;
+        [SerializeField] private float wrapAroundDistance = 40f;
+
+        private float _currentScrollSpeed;
         private bool _canScroll = true;
+        
+        private void Awake()
+        {
+            _currentScrollSpeed = normalScrollSpeed;
+        }
 
         private void Start()
         {
             PlayerController.Instance.OnPlayerDeath += OnPlayerDeath;
             PlayerController.Instance.OnPlayerTakeDamage += OnPlayerTakeDamage;
         }
-
-
-
+        
         private void Update()
         {
-            if (!_canScroll) return;
-            transform.position =  new Vector3(transform.position.x - scrollSpeed * Time.deltaTime, transform.position.y, transform.position.z);
-            if (transform.position.x <= -20)
-            {
-                float overshot = transform.position.x + 20;
-                transform.position =  new Vector3(overshot + 20, transform.position.y, transform.position.z);
-            }
+            if (!_canScroll) 
+                return;
             
+            transform.position =  new Vector3(transform.position.x - normalScrollSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+            if (transform.position.x <= resetPositionX)
+                transform.position =  new Vector3(wrapAroundDistance, transform.position.y, transform.position.z);
         }
 
         private void OnDestroy()
@@ -41,13 +48,13 @@ namespace FirstMinigame
     
         private void OnPlayerTakeDamage(object sender, EventArgs e)
         {
-            scrollSpeed = 3f;
-            Invoke(nameof(SetScrollSpeed), 3f);
+            _currentScrollSpeed = slowedScrollSpeed;
+            Invoke(nameof(SetScrollSpeed), slowDownDuration);
         }
 
         private void SetScrollSpeed()
         {
-            scrollSpeed = 5f;
+            _currentScrollSpeed =  normalScrollSpeed;
         }
     }
 }

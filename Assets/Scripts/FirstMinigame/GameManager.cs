@@ -8,6 +8,8 @@ namespace FirstMinigame
 {
     public class GameManager : MonoBehaviour
     {
+        [SerializeField] private string nextScene = "Scenes/1st2ndText";
+        [SerializeField] private string currentScene = "Scenes/FirstMinigame";
         [SerializeField] private Camera cameraComponent;
         [SerializeField] private float timeToWin = 60f;
         [SerializeField] private Slider slider;
@@ -28,7 +30,7 @@ namespace FirstMinigame
             if (_elapsedTime >= timeToWin)
             {
                 _isTransitioning = true;
-                SceneTransitionManager.Instance.LoadScene("Scenes/1st2ndText");
+                SceneTransitionManager.Instance.LoadScene(nextScene);
             }
         }
 
@@ -39,7 +41,7 @@ namespace FirstMinigame
 
         private void ReloadScene(object sender, EventArgs e)
         {
-            SceneTransitionManager.Instance.LoadScene("Scenes/FirstMinigame");
+            SceneTransitionManager.Instance.LoadScene(currentScene);
         }
     }
 }

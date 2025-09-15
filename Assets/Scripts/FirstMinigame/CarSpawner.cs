@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 namespace FirstMinigame
 {
@@ -15,30 +15,26 @@ namespace FirstMinigame
 
         private void Start()
         {
-            SetCooldown();
             _carPool = CarPool.Instance;
+            StartCoroutine(SpawnLoop());
         }
 
-        private void Update()
+        private IEnumerator SpawnLoop()
         {
-            _elapsedtime +=  Time.deltaTime;
-            if (_elapsedtime < _currentSpawnCooldown)
-                return;
-
-            SpawnCar();
-            _elapsedtime = 0;
-            SetCooldown();
-        }
-
-        private void SetCooldown()
-        {
-            _currentSpawnCooldown = Random.Range(minSpawnCooldown, maxSpawnCooldown);
+            while (true) 
+            {
+                float spawnCooldown = Random.Range(minSpawnCooldown, maxSpawnCooldown);
+                yield return new WaitForSeconds(spawnCooldown);
+                
+                SpawnCar();
+            }
         }
 
         private void SpawnCar()
         {
             GameObject carToSpawn = _carPool.GetPooledObject();
-            
+            if (carToSpawn == null) return;
+
             int randomLineIndex = Random.Range(0, spawnPoints.Length);
             Transform spawnPoint = spawnPoints[randomLineIndex];
             

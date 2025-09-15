@@ -22,6 +22,9 @@ namespace FirstMinigame
 
         private void OnTriggerEnter(Collider other)
         {
+            if (!other.CompareTag("Car"))
+                return;
+            
             playerHealth--;
             OnPlayerTakeDamage?.Invoke(this, EventArgs.Empty);
             if (playerHealth <= 0)
