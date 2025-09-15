@@ -62,13 +62,19 @@ public class SceneTransitionManager : MonoBehaviour
         }
         
         blackImage.color = new Color(0, 0, 0, 1);
-        
+            
         SceneManager.LoadScene(sceneName);
     }
     
     private IEnumerator FadeIn()
     {
-        Cursor.visible = false;
+        if (SceneManager.GetActiveScene().name != "Menu")
+            Cursor.visible = false;
+        else
+        {
+            Cursor.visible = true;
+            Destroy(this.gameObject);
+        }
         blackImage.gameObject.SetActive(true);
         
         float elapsedTime = 0;

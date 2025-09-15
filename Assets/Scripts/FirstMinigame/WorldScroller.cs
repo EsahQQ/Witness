@@ -30,7 +30,7 @@ namespace FirstMinigame
             if (!_canScroll) 
                 return;
             
-            transform.position = new Vector3(transform.position.x - normalScrollSpeed * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - _currentScrollSpeed * Time.deltaTime, transform.position.y, transform.position.z);
             if (transform.position.x <= resetPositionX)
                 transform.position =  new Vector3(transform.position.y + wrapAroundDistance, transform.position.y, transform.position.z);
         }
