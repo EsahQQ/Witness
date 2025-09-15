@@ -10,6 +10,8 @@ public class TextTypeEffect : MonoBehaviour
     [SerializeField] private string text;
 
     [SerializeField] private string sceneToLoad;
+
+    [SerializeField] private TextMeshProUGUI pressHint;
     private TextMeshProUGUI _textPanel;
     private bool _isTextTypeEnd;
 
@@ -40,5 +42,18 @@ public class TextTypeEffect : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
         _isTextTypeEnd = true;
+        StartCoroutine(ShowHint());
+    }
+
+    private IEnumerator ShowHint()
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < 2)
+        {
+            float newAlpha = Mathf.Lerp(0, 1, elapsedTime / 2);
+            pressHint.color = new Color(1, 1, 1, newAlpha);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 }
